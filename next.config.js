@@ -6,12 +6,12 @@ const nextConfig = {
     reactStrictMode: true,
     images: {
       loader: 'custom',
-      path: 'localhost:3000/2023/porsenigama',
+      path: 'localhost:5050/2023/porsenigama',
       loaderFile: './components/loader.js',
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'localhost:3000',
+          hostname: 'localhost:5050',
           port: '',
         },
         {

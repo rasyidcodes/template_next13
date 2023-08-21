@@ -5,28 +5,10 @@ import { Kegiatan } from '../../components/pages/kegiatan'
 import { OlahragaList } from '@/components/app/cabor/olahraga/OlahragaList'
 
 export async function getStaticPaths() {
-  const ppsmbFakultas = [
+  const cabor = [
     'sepakbola',
     'bulutangkis',
-    'metamorphoself',
-    'simfoni',
-    'papyrus',
-    'dialektika',
-    'geospace',
-    'justicia',
-    'kampung-budaya',
-    'society',
-    'identistry',
-    'vetebrae',
-    'pionir-morfogenesis',
-    'pelestari',
-    'pascal',
-    'organik',
-    'pionir-rancher',
-    'prk',
-    'kesatria',
-    'agrophoria',
-    'permadani',
+    
   ]
   const routes = [
     'agenda',
@@ -38,7 +20,8 @@ export async function getStaticPaths() {
     'ketentuan',
     'panduan',
     'olahraga',
-    ...ppsmbFakultas.map((route) => `ppsmb-fakultas/${route}`),
+    ...
+    cabor.map((route) => `cabor/olahraga/${route}`),
   ]
   const paths = routes.map((route) => {
     return { params: { kegiatan: route.split('/') } }
